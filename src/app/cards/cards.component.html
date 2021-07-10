@@ -1,0 +1,19 @@
+<div [hidden]="!isFetching" class="flex-container flex-start">
+    <div class="card" *ngFor="let spaceship of spaceships">
+      <div style="background-color:#A9A9A9;">
+        <img class="card-image" [src]="spaceship?.links?.mission_patch">
+      </div>  
+      <p class="space-craft">{{spaceship.mission_name}} # {{spaceship.flight_number}}</p>
+      <div style="display:flex;">
+        <p><b>Mission Id:</b></p>
+        <ul>
+          <li *ngFor="let id of spaceship.mission_id">{{id}}</li>
+        </ul>
+      </div>
+      <p><b>Launch Year:</b>{{spaceship.launch_year}}</p>
+      <p><b>Successful Landing</b>:{{spaceship.launch_success}}</p> 
+    </div>
+</div>
+<div [hidden]="isFetching">
+  <h1>Is Loading...</h1>
+</div>

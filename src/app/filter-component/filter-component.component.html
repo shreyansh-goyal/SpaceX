@@ -1,0 +1,27 @@
+<h5>Filters</h5>
+
+<div class="container">
+
+    <div class="centered-heading underline-border">
+      <p class="center-align">Launch Year</p>
+    </div>
+
+    <div class="flex-container my-4 space-aorund" style="width:70%;margin:0 auto;">
+      <button (click)="filterByYear(year)"  class="btn btn-success filter-button" *ngFor="let year of launchYear">{{year}}</button>
+    </div>
+
+    <div class="centered-heading underline-border">
+      <p class="center-align">Successful Launch</p>
+    </div>
+    <div class="flex-container my-4" style="width:70%;margin:0 auto;">
+      <button (click)="filterByLaunchSuccess(true)" class="btn btn-success filter-button" >True</button>
+      <button (click)="filterByLaunchSuccess(false)" class="btn btn-success filter-button" >False</button>
+    </div>
+
+    <div class="centered-heading underline-border">
+      <p class="center-align">Successful Landing</p>
+    </div>
+    <div class="flex-container my-4" style="width:70%;margin:0 auto;">
+      <button (click)="filterByLandSuccess(true)" class="btn btn-success filter-button" >True</button>
+      <button (click)="filterByLandSuccess(false)" class="btn btn-success filter-button" >False</button>
+    </div>
